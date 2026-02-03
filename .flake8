@@ -1,0 +1,4 @@
+[flake8]
+exclude = .git, .\venv, venv, .venv, .pytest_cache, __pycache__, migrations, *.pyc, db.sqlite3
+max-line-length = 120
+ignore = E501,F401,F403,F405,F841,W391,W292,W293,W504,E302,W503,E305,E713,E124,F822,F821

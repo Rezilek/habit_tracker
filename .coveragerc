@@ -1,0 +1,31 @@
+[run]
+source = .
+omit =
+    */migrations/*
+    */tests/*
+    */__pycache__/*
+    venv/*
+    .venv/*
+    env/*
+    config/asgi.py
+    config/wsgi.py
+    manage.py
+    conftest.py
+    */management/commands/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __str__
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+    class .*Test
+    class .*Tests
+    @property
+    @abstractmethod
+
+show_missing = true
+skip_covered = false

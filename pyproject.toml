@@ -1,0 +1,23 @@
+﻿[tool.flake8]
+exclude = [
+    "venv",
+    ".venv", 
+    ".pytest_cache",
+    "__pycache__",
+    "migrations",
+    "*.pyc",
+    "db.sqlite3"
+]
+max-line-length = 120
+ignore = [
+    "E501",
+    "F401", 
+    "F403",
+    "F841",
+    "W391",
+    "W292",
+    "W293", 
+    "E302",
+    "W503",
+    "E305"
+]
