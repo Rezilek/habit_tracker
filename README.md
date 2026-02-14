@@ -280,3 +280,4 @@ CORS: django-cors-headers
 
 Р›РёС†РµРЅР·РёСЏ
 MIT
+Обновление SSH ключа для деплоя
