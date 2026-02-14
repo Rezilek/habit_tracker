@@ -66,6 +66,7 @@ jobs:
         REDIS_URL: redis://localhost:6379/0
         CELERY_BROKER_URL: redis://localhost:6379/0
         CELERY_RESULT_BACKEND: redis://localhost:6379/0
+	CSRF_TRUSTED_ORIGINS: 'http://localhost,http://127.0.0.1,http://158.160.86.6'
       run: |
         python manage.py migrate
         coverage run manage.py test
