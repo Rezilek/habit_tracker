@@ -1,31 +1,51 @@
-# .gitignore
+# Virtual environment
 venv/
+env/
+ENV/
+
+# Python
 *.pyc
 __pycache__/
-*.sqlite3
-.env
-*.log
-htmlcov/
-.coverage
-.coverage.*
-.DS_Store
-*.db
-*.pid
-*.pot
+*.pyo
+*.pyd
+.Python
 *.py[co]
-*.so
 *.egg-info/
-*.manifest
-*.spec
-*.cache
-.pytest_cache/
-.tox/
-.vscode/
+dist/
+build/
+
+# Database
+*.sqlite3
+*.db
+
+# Environment
+.env
+.env.local
+.env.example  # но сам .env.example мы закоммитим отдельно
+
+# IDE
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
+.DS_Store
+
+# Logs
+*.log
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+.tox/
+
+# Django
+staticfiles/
+media/
+*.pot
+*.pid
 celerybeat-schedule
 celerybeat.pid
 dump.rdb
-migrations/
