@@ -1,0 +1,28 @@
+name: Debug Secrets
+
+on:
+  push:
+    branches: [ homework35.2 ]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Debug Secrets Availability
+        run: |
+          echo "Checking if secrets are available..."
+          echo "SERVER_HOST is set: ${{ secrets.SERVER_HOST != '' }}"
+          echo "SERVER_USER is set: ${{ secrets.SERVER_USER != '' }}"
+          echo "SSH_PRIVATE_KEY is set: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
+          echo "DB_NAME is set: ${{ secrets.DB_NAME != '' }}"
+          echo "DB_USER is set: ${{ secrets.DB_USER != '' }}"
+          echo "DB_PASSWORD is set: ${{ secrets.DB_PASSWORD != '' }}"
+          echo "SECRET_KEY is set: ${{ secrets.SECRET_KEY != '' }}"
+      
+      - name: Test direct variable
+        run: |
+          echo "Testing direct variable..."
+          echo "SERVER_HOST value length: ${{ secrets.SERVER_HOST }}"
